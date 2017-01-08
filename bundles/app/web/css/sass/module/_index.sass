@@ -1,0 +1,92 @@
+
+// inline menu style
+.menuinline ul>li
+  display: inline
+
+.menuinline ul>li>a
+  display: inline-block
+  padding: 5px 10px
+
+// Search element
+div[data-block="search"]
+  width: 260px
+  padding-left: 10px
+
+  .icon-search
+    color: $colorDark1
+
+  input[name="search"]
+    padding: 5px 5px
+    width: 220px
+    color: $colorDark1
+    border: none
+    background-color: transparent
+
+//.snippet-item
+
+.snippet-item
+  display: block
+  width: 100%
+  border-bottom: 3px solid #ced8e2
+
+  .si-preview
+    width: 30px
+    color: $colorDark1
+    text-align: right
+
+  .si-title
+    padding: 3px 10px
+
+    .si-description
+      font-size: 80%
+
+  .si-vote
+    width: 30px
+    font-size: 80%
+    font-weight: bold
+    text-align: center
+    color: $colorDark1
+
+
+// MEDIA QUERY
+@media screen and (max-width: 768px)
+  div[data-block="menu"]
+    display: block
+    ul>li>a
+      display: block
+      //font-size: 125%
+      text-align: center
+      padding-top: 12px
+      padding-bottom: 12px
+      border-bottom: 1px solid $colorLight3
+
+  div[data-block="right"]
+    display: block
+    ul>li>a
+      //font-size: 110%
+      padding-top: 20px
+      padding-bottom: 20px
+      border-left: 1px solid $colorLight3
+
+  div[data-block="search"]
+    display: block
+    padding: 5px 5px
+    width: 100%
+
+    input[name="search"]
+      padding: 20px 5px
+      width: 100%
+      font-size: 110%
+      border-bottom: 1px solid $colorLight3
+
+  div[data-block="admin"]
+    display: block
+
+  #sidebar>#menu-category>li>a
+    display: block
+    //font-size: 125%
+    text-align: center
+    padding-top: 12px
+    padding-bottom: 12px
+    border-bottom: 1px solid $colorLight3
+

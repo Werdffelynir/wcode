@@ -1,0 +1,39 @@
+#page
+  display: block
+
+//#navigation>section:first-child
+//  background-color: $bgColor1
+
+#navigation>section:last-child
+  background-color: $bgColor2
+
+#sidebar
+  width: 260px
+
+#content
+  background-color: $colorWhite
+
+#menu-category
+  margin-top: 10px
+
+#menu-category li
+  display: inline
+
+#menu-category li>a
+  display: block
+  padding: 4px 20px
+  font-size: 90%
+
+// MEDIA QUERY
+@media screen and (max-width: 768px)
+  body
+    font-size: 110%
+
+    #wrapper
+      display: block
+      #sidebar
+        display: block
+        width: 100%
+      #content
+        display: block
+

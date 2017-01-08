@@ -1,0 +1,7 @@
+composer.phar
+.idea/
+
+#vendor/
+#composer.lock
+
+bundles/app/database/db.sqlite
