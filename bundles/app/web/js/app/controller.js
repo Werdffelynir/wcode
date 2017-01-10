@@ -1,19 +1,30 @@
 
-App.namespace('Controller', function(App) {
+App.namespace('Controller', function(app) {
+
     /**
-     * @namespace App.Controller
+     * #@typedef {NamespaceApplication|{}} App
      */
-    var _ = {};
+
+    var
+        /**
+         * @type {NamespaceApplication|{}} App
+         */
+        App = app,
+
+        /**
+         * @namespace App.Controller
+         */
+        controller = {};
 
     /**
      * @namespace App.Controller.initialize
      */
-    _.initialize = function(){
+    controller.initialize = function(){
 
-        App.node['body'] = App.query('body');
+        App.node['box'] = App.query('#box');
+        App.node['boxBg'] = App.query('#box-background');
         App.node['page'] = App.query('#page');
-        App.node['navigation_top'] = App.query('#navigation_top');
-        App.node['navigation_sub'] = App.query('#navigation_sub');
+        App.node['navigation'] = App.query('#navigation');
         App.node['wrapper'] = App.query('#wrapper');
         App.node['sidebar'] = App.query('#sidebar');
         App.node['content'] = App.query('#content');
@@ -21,13 +32,34 @@ App.namespace('Controller', function(App) {
 
 
         // Load blocks
-        App.Block.NavigationTop.init(App.node['navigation_top']);
-        App.Block.NavigationSub.init(App.node['navigation_sub']);
+        App.Block.Box.init(App.node['box'], App.node['boxBg']);
+        App.Block.Navigation.init(App.node['navigation']);
 
-        console.log(App.Block.NavigationTop.getElements('left'));
-        // body
-        //App.domLoaded(function () {console.log('domLoaded');});
+
+
+
+
+
     };
 
-    return _;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return controller;
 });

@@ -1,5 +1,8 @@
+/**
+ *
+ * @type {NamespaceApplication|{}}
+ */
 var App = new NamespaceApplication({
-    constructsType: false,
     debug: true,
     url: '/bundles/app/',
     node: {}
@@ -9,15 +12,18 @@ var App = new NamespaceApplication({
 App.require('libs', [
 
     App.url + 'js/lib/nodemanager.js',
-    App.url + 'js/lib/utilities.js'
+    App.url + 'js/lib/utilities.js',
+    App.url + 'js/lib/timer.js'
 
 ], initLibrary, initError);
 
 // Module scripts
 App.require('module', [
     App.url + 'js/app/block/box.js',
-    App.url + 'js/app/block/navigation.top.js',
-    App.url + 'js/app/block/navigation.sub.js',
+    App.url + 'js/app/block/navigation.js',
+    // App.url + 'js/app/block/navigation.top.js',
+    // App.url + 'js/app/block/navigation.sub.js',
+
     App.url + 'js/app/controller.js'
 
 ], initDependence, initError);

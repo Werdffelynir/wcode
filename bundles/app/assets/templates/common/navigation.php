@@ -18,8 +18,8 @@
         <ul>
             <li><a href="#">JSRun</a></li>
             <li><a href="#">CSSGrid</a></li>
-            <li><a href="#">Register</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="#register" data-nm="register">Register</a></li>
+            <li><a href="#login" data-nm="login">Login</a></li>
         </ul>
     </div>
 </section>

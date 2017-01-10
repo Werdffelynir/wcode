@@ -1,5 +1,5 @@
 
-App.namespace('Block.NavigationTop', function(app) {
+App.namespace('Block.Navigation', function(app) {
 
     var
         /**
@@ -8,7 +8,7 @@ App.namespace('Block.NavigationTop', function(app) {
         App = app,
 
         /**
-         * @namespace App.Block.NavigationTop
+         * @namespace App.Block.Navigation
          */
         _ = {
             wrapper: null,
@@ -16,21 +16,36 @@ App.namespace('Block.NavigationTop', function(app) {
         };
 
     /**
-     * @namespace App.Block.NavigationTop.init
+     * @namespace App.Block.Navigation.init
      */
     _.init = function(wrapper){
         _.wrapper = wrapper;
+
+        _.appointButtons();
+    };
+
+    _.appointButtons = function () {
+        var rightMenu = App.Block.Navigation.getElements('right');
+        var btns = NodeManager('a[data-nm]', 'data-nm')
+            .search(rightMenu);
+            //.getElements();
+        btns.onClick('login', function (event, target) {
+            event.preventDefault();
+            App.Block.Box.show('Login my lord', 'htmlForm');
+        });
+
+
     };
 
     /**
-     * @namespace App.Block.NavigationTop.getWrapper
+     * @namespace App.Block.Navigation.getWrapper
      */
     _.getWrapper = function(){
         return _.wrapper;
     };
 
     /**
-     * @namespace App.Block.NavigationTop.getElements
+     * @namespace App.Block.Navigation.getElements
      */
     _.getElements = function(attr){
         var nm = new NodeManager('div');

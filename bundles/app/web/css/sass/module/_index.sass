@@ -1,3 +1,29 @@
+// UI Elements
+.btn-style
+  display: inline-block
+  padding: 3px 20px
+  text-align: center
+  border-radius: 4px
+  color: $colorWhite
+  cursor: pointer
+
+.btn-style:hover
+  box-shadow: inset 0 0 15px 10px $colorBlackA50
+
+.btn
+  @extend .btn-style
+  background-color: $colorDark1
+
+.btn-red
+  @extend .btn-style
+  background-color: $colorRed
+
+.btn-green
+  @extend .btn-style
+  background-color: $colorGreen
+
+
+
 
 // inline menu style
 .menuinline ul>li
@@ -27,7 +53,7 @@ div[data-block="search"]
 .snippet-item
   display: block
   width: 100%
-  border-bottom: 3px solid #ced8e2
+  border-bottom: 3px solid $bgColor2
 
   .si-preview
     width: 30px
@@ -89,4 +115,5 @@ div[data-block="search"]
     padding-top: 12px
     padding-bottom: 12px
     border-bottom: 1px solid $colorLight3
+
 

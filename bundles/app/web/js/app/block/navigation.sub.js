@@ -1,12 +1,19 @@
 
-App.namespace('Block.NavigationSub', function(App) {
-    /**
-     * @namespace App.Block.NavigationSub
-     */
-    var _ = {
-        wrapper: null,
-        elements: null
-    };
+App.namespace('Block.NavigationSub', function(app) {
+
+    var
+        /**
+         * @type {NamespaceApplication|{}} App
+         */
+        App = app,
+
+        /**
+         * @namespace App.Block.NavigationSub
+         */
+        _ = {
+            wrapper: null,
+            elements: null
+        };
 
     /**
      * @namespace App.Block.NavigationSub.init
@@ -14,13 +21,6 @@ App.namespace('Block.NavigationSub', function(App) {
     _.init = function(wrapper){
         _.wrapper = wrapper;
     };
-
-
-
-
-
-
-
 
     /**
      * @namespace App.Block.NavigationSub.getWrapper
@@ -42,6 +42,30 @@ App.namespace('Block.NavigationSub', function(App) {
             return _.elements[attr];
         return _.elements;
     };
+
+    /*   **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     return _;
 });

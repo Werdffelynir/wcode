@@ -1,4 +1,7 @@
-
+/**
+ *
+ * @type {NamespaceApplication|{}}
+ */
 App.namespace('Module.Api', function(App) {
     /**
      * @namespace App.Module.Api
